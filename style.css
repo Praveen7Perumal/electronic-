@@ -181,13 +181,43 @@
 	margin-top: 20px;
 	transition: .3s ease;
 	cursor: pointer;
+	text-transform: uppercase;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	border: none;
+	background-color: white;
 }
 .p4 button:hover
 {
-	background-color: #3CB371;
-	box-shadow: 0 0 20px grey;
+/*	background-color: #3CB371;*/
 	transform: scale(1.1);
 	color: white;
+	box-shadow: 
+		0 0 10px black,
+		0 0 20px beige,
+		0 0 40px beige,
+		0 0 80px beige,
+		0 0 160px beige;
+}
+
+.p4 button::before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -10px;
+	width: 0;
+	height: 100%;
+	background: olivedrab;
+	transform: skewX(35deg);
+	z-index: -1;
+	transition: .5s;
+
+}
+.p4 button:hover:before
+{
+	width: 84%;
 }
 
 .p5
